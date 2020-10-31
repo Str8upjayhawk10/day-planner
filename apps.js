@@ -17,10 +17,16 @@ $(document).ready(function(){
     const times = [9,10,11,12,13,14,15,16,17]
     // create a loop using forEach method concise and less error prone arrow function
     times.forEach(time => {
-    // console.log showed 9 lines of 9 arrays 0 represent 900hrs 8 represent 1700hrs
-        // console.log(times)
-        
-    }) 
+    const timeCheck = window.localStorage.getItem(time)
+    const currentHour = moment().hour()
+    const timeId = "#" + time
+    
+    if(currentHour > time){
+       
+    }
+    
+    window.localStorage.setItem(time, '')
+}) 
     
     // The submit event is sent to the element "form" when the user is attempting to submit a form
     $('form').on('submit', function (e) {  
