@@ -15,17 +15,33 @@ $(document).ready(function(){
 
     // create an array to keep track of time
     const times = [9,10,11,12,13,14,15,16,17]
-    // create a loop using forEach method concise and less error prone arrow function
+    // create a for loop using forEach method arrow function
     times.forEach(time => {
-    const timeCheck = window.localStorage.getItem(time)
+        window.localStorage.setItem(time, '')
+    const timeCheck = window.localStorage.getItem(times)
+    
     const currentHour = moment().hour()
-    const timeId = "#" + time
+    const timesId = "#" + times
+    // console.log(currentHour)
+
+
+
+
+
+
     
-    if(currentHour > time){
-       
-    }
+
+
+
+
+})
+
     
-    window.localStorage.setItem(time, '')
+
+
+    
+    
+    // console.log(currentHour)
 }) 
     
     // The submit event is sent to the element "form" when the user is attempting to submit a form
@@ -44,7 +60,7 @@ $(document).ready(function(){
     
 
 
-});
+
 
 
 
