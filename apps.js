@@ -17,31 +17,22 @@ $(document).ready(function(){
     const times = [9,10,11,12,13,14,15,16,17]
     // create a for loop using forEach method arrow function
     times.forEach(time => {
-        window.localStorage.setItem(time, '')
+        // window.localStorage.setItem(time, '')
     const timeCheck = window.localStorage.getItem(times)
-    
-    const currentHour = moment().hour()
-    const timesId = "#" + times
-    // console.log(currentHour)
+    // console.log(timeCheck)
+        const currentHour = moment().hour()
+        console.log(currentHour)
+// current time confirmed
 
-
-
-
-
-
-    
-
-
-
+    if(timeCheck === null) {
+window.localStorage.setItem(time, "")
+    } else if( timeCheck.length > 0) {
+        // dynamic back tic's given value
+        $(`#${time}`).attr('value', window.localStorage.getItem(time))
+    }
 
 })
 
-    
-
-
-    
-    
-    // console.log(currentHour)
 }) 
     
     // The submit event is sent to the element "form" when the user is attempting to submit a form
